@@ -30,12 +30,22 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Date Picker selected", Toast.LENGTH_LONG).show()
 
                 val selectedDate = "$selectedDayOfMonth/${selectedMonth+1}/$selectedYear"
+                val todayDate = "$day/${month+1}/$year"
 
                 tvSelectedDate.setText(selectedDate)
 
-                val simpleDate = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+                val simpleSelectedDate = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+                val simpleTodayDate = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
 
-                val theDate = simpleDate.parse(selectedDate)
+                val chosenDate = simpleSelectedDate.parse(selectedDate)
+                val todaysDate = simpleTodayDate.parse(todayDate)
+                val difference = todaysDate.time - chosenDate.time
+                val seconds = difference/1000
+                val minutes = seconds/60
+                val hours = minutes/60
+                val days = hours/24
+
+                tvSelectedDateInMinutes.setText(minutes.toString())
             }, year, month, day).show()
     }
 }
