@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#FFA938</color>
+    <color name="colorPrimaryDark">#FFA938</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textColor">#844046</color>
+    <color name="secondaryTextColorRed">#8f3d3d</color>
+    <color name="backgroundColor">#FEF1E0</color>
+    <color name="ageTextColor">#FFFFFF</color>
+    <color name="ageTextBackgroundColor">#C846DCE0</color>
+    <color name="datePickerTextColor">#1a1a1a</color>
+    <color name="datePickerBackgroundColor">#FFFFFF</color>
 </resources>
